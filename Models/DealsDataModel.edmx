@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="KCBCRModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="UAT_CHR_Deals">
+          <Key>
+            <PropertyRef Name="DealId" />
+          </Key>
+          <Property Name="DealId" Type="int" Nullable="false" />
+          <Property Name="DealNumber" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="EstimatedMoveDate" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="EstimatedPayDate" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="AllocationVolume" Type="float" Nullable="false" />
+          <Property Name="Commodity" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="NotionalAmount" Type="float" Nullable="false" />
+          <Property Name="Collateral" Type="float" />
+          <Property Name="NetExposure" Type="float" Nullable="false" />
+          <Property Name="Exposure" Type="float" Nullable="false" />
+          <Property Name="CounterpartyId" Type="int" Nullable="false" />
+          <Property Name="CounterpartyName" Type="nvarchar" MaxLength="512" Nullable="false" />
+          <Property Name="AllocationNumber" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="ExpectedCreditRelease" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="CreditComments" Type="nvarchar" MaxLength="100" />
+          <Property Name="CreditAnalyst" Type="nvarchar" MaxLength="100" />
+          <Property Name="Reason" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="DealStatus" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="IsBuyDeal" Type="bit" Nullable="false" />
+          <Property Name="DealCreditHoldReleaseCommentId" Type="int" Nullable="false" />
+          <Property Name="DealCreditHoldReleaseReasonId" Type="int" Nullable="false" />
+          <Property Name="ResponsibleAnalystId" Type="int" Nullable="false" />
+          <Property Name="DealCreditHoldReleaseStatusId" Type="int" Nullable="false" />
+          <Property Name="BusinessUnit" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Scheduler" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Trader" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="TransactionUnits" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="ResponsibleAnalyst" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="OrderNumber" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="ItemNumber" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="CreditRevisionDate" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="RevisedBy" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="ContractStartDate" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="ContractEndDate" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="ParentName" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="BookingCompany" Type="nvarchar" MaxLength="512" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="KCBCRModelStoreContainer">
+          <EntitySet Name="UAT_CHR_Deals" EntityType="Self.UAT_CHR_Deals" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="KCBCRModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="UAT_CHR_Deals">
+          <Key>
+            <PropertyRef Name="DealId" />
+          </Key>
+          <Property Name="DealId" Type="Int32" Nullable="false" />
+          <Property Name="DealNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EstimatedMoveDate" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="EstimatedPayDate" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="AllocationVolume" Type="Double" Nullable="false" />
+          <Property Name="Commodity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NotionalAmount" Type="Double" Nullable="false" />
+          <Property Name="Collateral" Type="Double" />
+          <Property Name="NetExposure" Type="Double" Nullable="false" />
+          <Property Name="Exposure" Type="Double" Nullable="false" />
+          <Property Name="CounterpartyId" Type="Int32" Nullable="false" />
+          <Property Name="CounterpartyName" Type="String" MaxLength="512" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AllocationNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ExpectedCreditRelease" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="CreditComments" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CreditAnalyst" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Reason" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DealStatus" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IsBuyDeal" Type="Boolean" Nullable="false" />
+          <Property Name="DealCreditHoldReleaseCommentId" Type="Int32" Nullable="false" />
+          <Property Name="DealCreditHoldReleaseReasonId" Type="Int32" Nullable="false" />
+          <Property Name="ResponsibleAnalystId" Type="Int32" Nullable="false" />
+          <Property Name="DealCreditHoldReleaseStatusId" Type="Int32" Nullable="false" />
+          <Property Name="BusinessUnit" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Scheduler" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Trader" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TransactionUnits" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ResponsibleAnalyst" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="OrderNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ItemNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreditRevisionDate" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="RevisedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ContractStartDate" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="ContractEndDate" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="ParentName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BookingCompany" Type="String" MaxLength="512" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="KCBCREntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="UAT_CHR_Deals" EntityType="Self.UAT_CHR_Deals" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="KCBCRModelStoreContainer" CdmEntityContainer="KCBCREntities">
+          <EntitySetMapping Name="UAT_CHR_Deals">
+            <EntityTypeMapping TypeName="KCBCRModel.UAT_CHR_Deals">
+              <MappingFragment StoreEntitySet="UAT_CHR_Deals">
+                <ScalarProperty Name="DealId" ColumnName="DealId" />
+                <ScalarProperty Name="DealNumber" ColumnName="DealNumber" />
+                <ScalarProperty Name="EstimatedMoveDate" ColumnName="EstimatedMoveDate" />
+                <ScalarProperty Name="EstimatedPayDate" ColumnName="EstimatedPayDate" />
+                <ScalarProperty Name="AllocationVolume" ColumnName="AllocationVolume" />
+                <ScalarProperty Name="Commodity" ColumnName="Commodity" />
+                <ScalarProperty Name="NotionalAmount" ColumnName="NotionalAmount" />
+                <ScalarProperty Name="Collateral" ColumnName="Collateral" />
+                <ScalarProperty Name="NetExposure" ColumnName="NetExposure" />
+                <ScalarProperty Name="Exposure" ColumnName="Exposure" />
+                <ScalarProperty Name="CounterpartyId" ColumnName="CounterpartyId" />
+                <ScalarProperty Name="CounterpartyName" ColumnName="CounterpartyName" />
+                <ScalarProperty Name="AllocationNumber" ColumnName="AllocationNumber" />
+                <ScalarProperty Name="ExpectedCreditRelease" ColumnName="ExpectedCreditRelease" />
+                <ScalarProperty Name="CreditComments" ColumnName="CreditComments" />
+                <ScalarProperty Name="CreditAnalyst" ColumnName="CreditAnalyst" />
+                <ScalarProperty Name="Reason" ColumnName="Reason" />
+                <ScalarProperty Name="DealStatus" ColumnName="DealStatus" />
+                <ScalarProperty Name="IsBuyDeal" ColumnName="IsBuyDeal" />
+                <ScalarProperty Name="DealCreditHoldReleaseCommentId" ColumnName="DealCreditHoldReleaseCommentId" />
+                <ScalarProperty Name="DealCreditHoldReleaseReasonId" ColumnName="DealCreditHoldReleaseReasonId" />
+                <ScalarProperty Name="ResponsibleAnalystId" ColumnName="ResponsibleAnalystId" />
+                <ScalarProperty Name="DealCreditHoldReleaseStatusId" ColumnName="DealCreditHoldReleaseStatusId" />
+                <ScalarProperty Name="BusinessUnit" ColumnName="BusinessUnit" />
+                <ScalarProperty Name="Scheduler" ColumnName="Scheduler" />
+                <ScalarProperty Name="Trader" ColumnName="Trader" />
+                <ScalarProperty Name="TransactionUnits" ColumnName="TransactionUnits" />
+                <ScalarProperty Name="ResponsibleAnalyst" ColumnName="ResponsibleAnalyst" />
+                <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+                <ScalarProperty Name="ItemNumber" ColumnName="ItemNumber" />
+                <ScalarProperty Name="CreditRevisionDate" ColumnName="CreditRevisionDate" />
+                <ScalarProperty Name="RevisedBy" ColumnName="RevisedBy" />
+                <ScalarProperty Name="ContractStartDate" ColumnName="ContractStartDate" />
+                <ScalarProperty Name="ContractEndDate" ColumnName="ContractEndDate" />
+                <ScalarProperty Name="ParentName" ColumnName="ParentName" />
+                <ScalarProperty Name="BookingCompany" ColumnName="BookingCompany" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
